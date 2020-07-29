@@ -128,7 +128,7 @@ Hint: You can use .splice() for this
 
 function removeFlavorByName(originalFlavors, removeFlavor){
     
-    for (i = 0, i < originalFlavors.length, i++){
+    for (i = 0; i < originalFlavors.length; i++){
         
         if (originalFlavors[i] === removeFlavor){
         
@@ -179,7 +179,7 @@ function filterByWord(originalFlavors, findFlavor){
 
     const foundFlavors = [];
 
-    for (i = 0, i < originalFlavors.length, i++){
+    for (i = 0; i < originalFlavors.length; i++){
 
         if (originalFlavors[i].includes(findFlavor)){
 
@@ -204,12 +204,21 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/){
+function getAverageWordLength(originalFlavors){
 
-    /*code here*/
+    let wordLength = 0
+    let sum = 0
 
+    for (i = 0; i < origionalFlavors.length; i++){
+        wordLength = originalFlavors[i].split ("").length;
+
+        sum = wordLength + sum; 
+    }
+
+    console.log(sum / (originalFlavors.length + 1));
 }
 
+   getAverageWordLength(originalFlavors);
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
