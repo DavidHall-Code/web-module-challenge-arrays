@@ -209,7 +209,7 @@ function getAverageWordLength(originalFlavors){
     let wordLength = 0
     let sum = 0
 
-    for (i = 0; i < origionalFlavors.length; i++){
+    for (i = 0; i < originalFlavors.length; i++){
         wordLength = originalFlavors[i].split ("").length;
 
         sum = wordLength + sum; 
